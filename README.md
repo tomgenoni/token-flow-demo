@@ -53,6 +53,8 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 6. On successful publish a new package will be created and visible in the [repository](https://github.com/tomgenoni/token-flow-demo/pkgs/npm/token-flow-demo).
 
+7. You'll need to push the updated `package.json` back to the `main` branch.
+
 Note that at this point the token files are still [JSON files](https://github.com/tomgenoni/token-flow-demo/tree/main/src) and not ready to consume.
 
 ### Consuming
@@ -69,3 +71,5 @@ This process as described above is entirely manual. To make this process conside
 
 - Auto-publishing of new packages that read change severity levels in commit messages
 - Auto updates of CHANGELOGs, important for consumers
+
+Changesets is preferred as it allows the managing the release to change the messages that will populate the CHANGELOG, though I have not tested it yet.
