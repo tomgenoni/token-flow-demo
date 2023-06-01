@@ -8,7 +8,7 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 1. A [Tokens Studio Pro](https://tokens.studio/#pricing-2) account. This is the Figma plugin where we’ll manage the design tokens.
 2. Create a GitHub [Personal Access Token](https://github.com/settings/tokens) with at least `read:packages` and `write:packages` permissions. See [About permissions for GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries) for more. You'll need token for the next step and step 2 in "Tokens Studio setup" below.
-3. Add the Personal Access Token to your personal `~/.npmrc` file with `//npm.pkg.github.com/:_authToken=TOKEN`. See [Authenticating with a personal access token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
+3. Add the Personal Access Token to your personal `~/.npmrc` file with `//npm.pkg.github.com/:_authToken=TOKEN`. See ["Authenticating with a personal access token"](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
 4. In the `package.json` make sure a `publishConfig` entry is present according to the [GitHub Packages instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
 
 ## Steps
@@ -61,7 +61,7 @@ Note that at this point the token files are still [JSON files](https://github.co
 
 1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs [`build.js`](https://github.com/tomgenoni/token-flow-demo/blob/main/build.js) and this is what produces the platform-specific files, in this case CSS file and a JavaScript file.
 
-2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` in your application to view the distribution files.
+2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` in your application to view the distribution files. See ["Files included in package"](https://github.com/tomgenoni/token-flow-demo) to limit what files get published.
 
 3. You can now import to your application.
 
