@@ -2,14 +2,14 @@
 
 Minimal demonstration of how design tokens are created and managed in Figma using the [Tokens Studio](https://tokens.studio/) plugin, pushed to GitHub, published to GitHub Packages, transformed into platform-specific formats, and consumed by applications.
 
-Note for the sake of simplicity this example publiesh a CSS and JavaScript file. The `build.js` file can be updated to include other platforms and transforming options. See https://github.com/tokens-studio/sd-transforms.
+Note for the sake of simplicity this example publishes a CSS and JavaScript file. The `build.js` file can be updated to include other platforms and transforming options. See https://github.com/tokens-studio/sd-transforms.
 
 ## Requirements
 
 1. A [Tokens Studio Pro](https://tokens.studio/#pricing-2) account. This is the Figma plugin where we’ll manage the design tokens.
 2. Create a GitHub [Personal Access Token](https://github.com/settings/tokens). (You'll need this for the next step and step 2 in "Tokens Studio setup" below.)
 3. Add the Personal Access Token to your personal `~/.npmrc` file with `//npm.pkg.github.com/:_authToken=TOKEN`. See [Authenticating with a personal access token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
-4. In the `package.json` make sure a `publishConfig` entry according to the [GitHub Packages instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
+4. In the `package.json` make sure a `publishConfig` entry is present according to the [GitHub Packages instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
 
 ## Steps
 
@@ -59,4 +59,13 @@ Note that at this point the token files are still [JSON files](https://github.co
 
 1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs `build.js` and this is what produces the platform-specific types, in this case CSS variables and a JavaScript file.
 
-2. Inspect the `node_modules/@tomgenoni/
+2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` for the distribution files.
+
+3. You can import them to your application.
+
+## Automating package publishing
+
+This process as described above is entirely manual. To make this process considerably easier and less error-prone you can automate the `npm publish` step with tools like [semantic-release](https://github.com/semantic-release/semantic-release) and [changesets](https://github.com/changesets/changesets). These tools have features like:
+
+- Auto-publishing of new packages that read change serverity levels in commit messages
+- Auto updates of CHANGELOGs, important for consumers
