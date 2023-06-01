@@ -41,7 +41,7 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 ### GitHub review and publish package
 
-1. Review the Pull Request in GitHub with the standard workflow.
+1. Review the [Pull Request](https://github.com/tomgenoni/token-flow-demo/pulls) in GitHub with the standard workflow.
 
 2. Once the branch has been merged you are now ready to publish.
 
@@ -55,15 +55,15 @@ Note that at this point the token files are still [JSON files](https://github.co
 
 ### Consuming
 
-1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs `build.js` and this is what produces the platform-specific types, in this case CSS variables and a JavaScript file.
+1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs [`build.js`](https://github.com/tomgenoni/token-flow-demo/blob/main/build.js) and this is what produces the platform-specific files, in this case CSS file and a JavaScript file.
 
-2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` for the distribution files.
+2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` in your application to view the distribution files.
 
-3. You can import them to your application.
+3. You can now import to your application.
 
 ## Automating package publishing
 
 This process as described above is entirely manual. To make this process considerably easier and less error-prone you can automate the `npm publish` step with tools like [semantic-release](https://github.com/semantic-release/semantic-release) and [changesets](https://github.com/changesets/changesets). These tools have features like:
 
-- Auto-publishing of new packages that read change serverity levels in commit messages
+- Auto-publishing of new packages that read change severity levels in commit messages
 - Auto updates of CHANGELOGs, important for consumers

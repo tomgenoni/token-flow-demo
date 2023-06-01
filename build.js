@@ -11,7 +11,7 @@ const sd = StyleDictionary.extend({
       buildPath: 'dist/',
       files: [
         {
-          destination: 'variables.js',
+          destination: 'index.js',
           format: 'javascript/es6',
         },
       ],
