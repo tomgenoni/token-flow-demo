@@ -35,11 +35,11 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 2. After a token has been changed you'll see a blue dot in the lower left corner of the plugin. This means there are un-pushed changes in your branch. Click that icon and you'll be asked to enter a commit message.
 
-3. After a successful push you'll be asked to create a Pull Request. Click "Create Pull Request" and go to the repository on GitHub to start the review and merge process.
+3. After a successful push you'll be asked to create a Pull Request. Click "Create Pull Request" and go to the [repository on GitHub](https://github.com/tomgenoni/token-flow-demo/pulls) to start the review and merge process.
 
 ![ts-github](assets/ts-pull.png)
 
-### GitHub review and publish package
+### GitHub review, merge, and publish
 
 1. Review the [Pull Request](https://github.com/tomgenoni/token-flow-demo/pulls) in GitHub with the standard workflow.
 
@@ -55,15 +55,15 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 7. You'll need to push the updated `package.json` back to the `main` branch.
 
-Note that at this point the token files are still [JSON files](https://github.com/tomgenoni/token-flow-demo/tree/main/src) and not ready to consume.
+**Note**: At this point the token files are still [JSON files](https://github.com/tomgenoni/token-flow-demo/tree/main/src) and not ready to consume.
 
 ### Consuming
 
-1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs [`build.js`](https://github.com/tomgenoni/token-flow-demo/blob/main/build.js) and this is what produces the platform-specific files, in this case CSS file and a JavaScript file.
+1. In your application, run `npm install @tomgenoni/token-flow-demo`. A `postinstall` script runs [`build.js`](https://github.com/tomgenoni/token-flow-demo/blob/main/build.js) and this is what produces the platform-specific files, in this case one CSS file and one JavaScript file.
 
 2. Inspect `node_modules/@tomgenoni/token-flow-demo/dist/` in your application to view the distribution files. See ["Files included in package"](https://github.com/tomgenoni/token-flow-demo) to limit what files get published.
 
-3. You can now import to your application.
+3. You can now import the CSS or JavaScript file into to your application.
 
 ## Automating package publishing
 
