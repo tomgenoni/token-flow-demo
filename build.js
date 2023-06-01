@@ -7,7 +7,7 @@ const sd = StyleDictionary.extend({
   source: ['src/**/global.json'],
   platforms: {
     css: {
-      buildPath: 'dist/css/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'variables.css',

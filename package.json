@@ -2,9 +2,6 @@
   "name": "@tomgenoni/token-flow-demo",
   "version": "0.0.4",
   "description": "Minimal demonstration of how tokens are stored, transformed, and published for use in various platforms.",
-  "files": [
-    "dist/**"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tomgenoni/token-flow-demo.git"
