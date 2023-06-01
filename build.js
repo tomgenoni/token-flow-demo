@@ -6,6 +6,16 @@ registerTransforms(StyleDictionary);
 const sd = StyleDictionary.extend({
   source: ['src/**/global.json'],
   platforms: {
+    js: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'variables.js',
+          format: 'javascript/es6',
+        },
+      ],
+    },
     css: {
       buildPath: 'dist/',
       files: [

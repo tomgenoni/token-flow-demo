@@ -1,13 +1,13 @@
 # token-flow-demo
 
-Minimal demonstration of how design tokens are created and managed in Figma using the [Tokens Studio](https://tokens.studio/) plugin, pushed to GitHub, published to GitHub Packages, transformed into platform-specific formats, and consumed by applications.
+This is a minimal demonstration of how design tokens are created and managed in Figma using the [Tokens Studio](https://tokens.studio/) plugin, pushed to GitHub, published to GitHub Packages, transformed into platform-specific formats, and consumed by applications.
 
 Note for the sake of simplicity this example publishes a CSS and JavaScript file. The `build.js` file can be updated to include other platforms and transforming options. See https://github.com/tokens-studio/sd-transforms.
 
 ## Requirements
 
 1. A [Tokens Studio Pro](https://tokens.studio/#pricing-2) account. This is the Figma plugin where we’ll manage the design tokens.
-2. Create a GitHub [Personal Access Token](https://github.com/settings/tokens). (You'll need this for the next step and step 2 in "Tokens Studio setup" below.)
+2. Create a GitHub [Personal Access Token](https://github.com/settings/tokens) with at least `read:packages` and `write:packages` permissions. See [About permissions for GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries) for more. You'll need token for the next step and step 2 in "Tokens Studio setup" below.
 3. Add the Personal Access Token to your personal `~/.npmrc` file with `//npm.pkg.github.com/:_authToken=TOKEN`. See [Authenticating with a personal access token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
 4. In the `package.json` make sure a `publishConfig` entry is present according to the [GitHub Packages instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
 
@@ -15,19 +15,17 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 ### Tokens Studio setup
 
-1. Create a GitHub [Personal Access Token](https://github.com/settings/tokens). It will be needed in two places.
-
-2. In Figma, run Tokens Studio and in the Settings tab, find "Sync providers" and click “Add new”. Add a GitHub provider and enter the repository information along with the GitHub Personal Access Token.
+1. In Figma, run Tokens Studio and in the Settings tab, find "Sync providers" and click “Add new”. Add a GitHub provider and enter the repository information along with the GitHub Personal Access Token you created above.
 
 ![ts-github](assets/ts-github.png)
 
 ![ts-github](assets/ts-add.png)
 
-3. If the settings connect correctly you should see the GitHub options in the bottom left of the Tokens Studio plugin.
+2. If the settings connect correctly you should see the GitHub options in the bottom left of the Tokens Studio plugin.
 
 ![ts-github](assets/ts-ready.png)
 
-4. You should now be able to pull changes from the `main` branch with the down arrow icon.
+3. You should now be able to pull changes from the `main` branch with the down arrow icon.
 
 ### Tokens Studio changes
 
