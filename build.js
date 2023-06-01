@@ -4,7 +4,7 @@ const StyleDictionary = require('style-dictionary');
 registerTransforms(StyleDictionary);
 
 const sd = StyleDictionary.extend({
-  source: ['src/**/tokens.json'],
+  source: ['src/**/global.json'],
   platforms: {
     css: {
       buildPath: 'dist/css/',
