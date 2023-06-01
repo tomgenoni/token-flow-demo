@@ -72,4 +72,4 @@ This process as described above is entirely manual. To make this process conside
 - Auto-publishing of new packages that read change severity levels in commit messages
 - Auto updates of CHANGELOGs, important for consumers
 
-From what I've been told changesets is preferred as it allows the managing the release to change the messages to ensure that the versioning is correct, though I have not tested it yet.
+From what I understand, changesets is preferred as it allows the managing the release to change the messages to ensure that the versioning is correct, though it hasn't been tested yet.
