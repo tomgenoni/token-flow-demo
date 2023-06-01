@@ -33,9 +33,9 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 ![ts-github](assets/ts-branch.png)
 
-2. After a token has been changed you'll see a blue dot in the lower left corner of the plugin. This means there are unpushed changes in your branch. Click that icon and you'll be asked to enter a commit message.
+2. After a token has been changed you'll see a blue dot in the lower left corner of the plugin. This means there are un-pushed changes in your branch. Click that icon and you'll be asked to enter a commit message.
 
-3. After a succesful push you'll be asked to create a Pull Request. Click "Create Pull Request" and go to the repository on GitHub to start the review and merge process.
+3. After a successful push you'll be asked to create a Pull Request. Click "Create Pull Request" and go to the repository on GitHub to start the review and merge process.
 
 ![ts-github](assets/ts-pull.png)
 
@@ -49,7 +49,7 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 4. Run `npm publish` and this will create a new GitHub Package with the updated version number.
 
-5. On successful publish a new package will be created and visible in the [respository](https://github.com/tomgenoni/token-flow-demo/pkgs/npm/token-flow-demo).
+5. On successful publish a new package will be created and visible in the [repository](https://github.com/tomgenoni/token-flow-demo/pkgs/npm/token-flow-demo).
 
 Note that at this point the token files are still [JSON files](https://github.com/tomgenoni/token-flow-demo/tree/main/src) and not ready to consume.
 
