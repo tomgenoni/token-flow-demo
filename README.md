@@ -45,11 +45,13 @@ Note for the sake of simplicity this example publishes a CSS and JavaScript file
 
 2. Once the branch has been merged you are now ready to publish.
 
-3. Open `package.json` and update the `version` according to [Semantic Versioning](https://semver.org/) best practices.
+3. Pull the new changes in the `main` branch to your local copy of the repository.
 
-4. Run `npm publish` and this will create a new GitHub Package with the updated version number.
+4. Open `package.json` and update the `version` according to [Semantic Versioning](https://semver.org/) best practices.
 
-5. On successful publish a new package will be created and visible in the [repository](https://github.com/tomgenoni/token-flow-demo/pkgs/npm/token-flow-demo).
+5. Run `npm publish` and this will create a new GitHub Package with the updated version number.
+
+6. On successful publish a new package will be created and visible in the [repository](https://github.com/tomgenoni/token-flow-demo/pkgs/npm/token-flow-demo).
 
 Note that at this point the token files are still [JSON files](https://github.com/tomgenoni/token-flow-demo/tree/main/src) and not ready to consume.
 
