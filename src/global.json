@@ -1,7 +1,9 @@
 {
-  "black": {
-    "value": "#333",
-    "type": "color",
-    "description": "Dark color"
+  "fg": {
+    "black": {
+      "value": "#333",
+      "type": "color",
+      "description": "Dark color"
+    }
   }
 }
